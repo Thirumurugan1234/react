@@ -12,6 +12,9 @@ export const Header = () => {
             <div className='input-box'>
                 <input type='text' placeholder='Password' required/>
             </div>
+            <div className='remember-forget'>
+                <label><input type='checkbox'/>Remember me</label>
+            </div>
         </form>
     </div>
 
