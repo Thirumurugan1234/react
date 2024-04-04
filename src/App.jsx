@@ -1,54 +1,91 @@
-/*import { useState,useEffect } from 'react'*/
+/*import { useState,useEffect } from 'react'
 import './index.css'
 
-import { Header } from "./Components/Header";
+import { AppFooter } from "./Components/AppFooter";
+import { SideMenu } from "./Components/SideMenu/index";
 
 
+
+import "./App.css";
+import { PageContent } from "./Components/PageContent";
+import { AppHeader } from "./Components/AppHeader";
 
 
 
 function App() {
-  /*const [currentTime,setCurrentTIME] = useState(new Date());
-  useEffect(() =>{
-    const timer=setInterval(()=> {
-      setCurrentTIME(new Date());
-    },1000);
-    return ()=>clearInterval(timer);
-  },[]);
-  const formatTimewithleadingzero =(num) =>{
-    return num < 10 ? `0${num}`: num;
-  };
-  const formathour =(hour)=>{
-    return hour ===0 ? 12:hour >12 ? hour -12 :hour;
-  };
-
-  const formatDate =(date) =>{
-     return date.toLocalDateString();
-  };*/
+  
 
 
 
   
-  return (
-    <>
-    {/*<div className='digital-clock'>
-      <h1>Digital clock</h1>
-      <div className='time'>{formatTimewithleadingzero(formathour(currentTime.getHours()))} :
-  
-      {formatTimewithleadingzero(currentTime.getMinutes())} :
-      {formatTimewithleadingzero(currentTime.getSeconds())}
-
+  return(
+    /*<div className="App">
+    
+    
+     <AppHeader />
+     <space className="SideMenuAndPageContent">
+      <SideMenu></SideMenu>
+      <PageContent></PageContent>
+     </space>
+     <AppFooter />
+     </div>
       
-      </div>
-      <div className='date'>30 march 2024</div>
-    </div>*/}
-    <Header />
-    
+      
+     
+      
+      
     
   
-    </>
   );
 }
 
 
-export default App
+export default App;*/
+
+// App.js
+
+
+import "./App.css";
+import { Dashboard } from "./Components/Dashboard";
+import { Sidebar } from "./Components/Sidebar";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  
+} from "react-router-dom";
+import { SidebarData } from "./Components/SidebarData";
+import { About } from "./Components/About";
+import { Analystics } from "./Components/Analystics";
+
+
+
+function App(){
+  return (<div className="App">
+
+    <BrowserRouter>
+    <Routes>
+      <Route index element={<Sidebar />} />
+      <Route path="/Dashboard"element={<Dashboard />} />
+      <Route path="SidebarData"element={<SidebarData />} />
+      <Route path="About"element={<About />} />
+      <Route path="Analystics"element={<Analystics />} />
+      <Route path="add">
+        <Route index element={<About />} />
+        <Route path="addId" element={<Analystics />} />
+      </Route>
+
+      
+        
+    </Routes>
+    </BrowserRouter>
+  </div>
+ 
+  );
+ 
+}
+
+export default App;
+
+
+
