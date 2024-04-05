@@ -8,5 +8,20 @@
     flex: 6;
   }
 
+  .Widgets,.Chart{
+    display:flex;
+    padding: 10px;
+    gap: 10px;
+
   }
+  .Chart{
+    
+    padding: 30px;
+  }
+  
+    
+  }
+  
+
+  
 
