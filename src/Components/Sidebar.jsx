@@ -18,6 +18,8 @@ export const Sidebar = () => {
             <Widgets type="order"/>
             <Widgets type="earning"/>
             <Widgets type="balance"/>
+            <Widgets type="sales report" />
+            <Widgets type="purchase" />
 
 
 

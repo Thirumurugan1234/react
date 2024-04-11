@@ -4,6 +4,8 @@ import PersonIcon from '@mui/icons-material/Person';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart'
 import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
 import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet';
+import AssessmentIcon from '@mui/icons-material/Assessment';
+import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 
 
 
@@ -60,6 +62,29 @@ export const Widgets = ({type}) => {
                 icon:<AccountBalanceWalletIcon className="icon" style={{
                     backgroundColor:"rgba(128,0,128,0.2)",
                     color:"purple"
+                }} />,
+            };
+            break;
+
+            case "sales report":
+            data={
+                title:"SALES REPORT",
+                isMoney:true,
+                link:"see all report",
+                icon:<AssessmentIcon className="icon" style={{
+                    backgroundColor:"rgba(0,0,255,0.3)",
+                    color:"blue"
+                }} />,
+            };
+            break;
+            case "purchase":
+            data={
+                title:"PURCHASE",
+                isMoney:true,
+                link:"see details",
+                icon:<ShoppingBasketIcon className="icon" style={{
+                    backgroundColor:"rgba(196,164,110)",
+                    color:"brown"
                 }} />,
             };
             break;
